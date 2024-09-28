@@ -6,15 +6,15 @@
 // 3. Store the resulting array in a variable called `titleCasedPhrases`.
 
 let phrases = [
-  "hello world",
-  "javascript is fun",
-  "map is useful",
-  "coding challenges",
+  'hello world',
+  'javascript is fun',
+  'map is useful',
+  'coding challenges',
 ];
 
 let titleCasedPhrases = phrases.map((phrase) => {
   // Split the phrase into an array of words
-  let words = phrase.split(" ");
+  let words = phrase.split(' ');
 
   // Map over each word to capitalize the first letter
   let capitalizedWords = words.map((word) => {
@@ -23,7 +23,7 @@ let titleCasedPhrases = phrases.map((phrase) => {
   });
 
   // Join the capitalized words back into a single string
-  return capitalizedWords.join(" ");
+  return capitalizedWords.join(' ');
 });
 
 console.log(titleCasedPhrases); // Expected output: ["Hello World", "Javascript Is Fun", "Map Is Useful", "Coding Challenges"]

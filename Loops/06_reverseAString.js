@@ -13,8 +13,8 @@ Here’s a general approach without revealing the code:
 3. Concatenate each character to a new string as you go.
 */
 
-let str = "JavaScript";
-let reversedStr = "";
+let str = 'JavaScript';
+let reversedStr = '';
 
 for (let i = str.length - 1; i >= 0; i--) {
   reversedStr += str[i];

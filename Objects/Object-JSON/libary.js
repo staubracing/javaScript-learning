@@ -1,4 +1,4 @@
-import books from "./books.json" assert { type: "json" };
+import books from './books.json' assert { type: 'json' };
 
 const library = {
   books: books,
@@ -16,12 +16,12 @@ const library = {
 };
 
 library.addBook({
-  title: "Jurassic Park",
-  author: "Michael Crichton",
+  title: 'Jurassic Park',
+  author: 'Michael Crichton',
   year: 1984,
   isAvailable: true,
 });
 
 // Function call to add a book
 
-console.log(library.findBook("Dune"));
+console.log(library.findBook('Dune'));

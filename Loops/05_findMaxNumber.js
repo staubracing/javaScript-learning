@@ -51,4 +51,4 @@ function findMax(arr) {
 const numbers = [10, 5, 8, 20, 3];
 const maxNumber = findMax(numbers);
 
-console.log("Maximum number:", maxNumber); // Output: 20
+console.log('Maximum number:', maxNumber); // Output: 20

@@ -19,22 +19,22 @@ book.toggleAvailability();
 console.log(book.getSummary());
 */
 let book = {
-    title: "Weaveworld",
-    author: "Clive Barker",
-    year: 1972,
-    isAvailable: true,
-    getSummary: function(){
-        return "The book is about the adventures of a carpet and Cal it's protector"
-    },
-    toggleAvailability: function(){
-        this.isAvailable = !this.isAvailable
-    } 
-}
+  title: 'Weaveworld',
+  author: 'Clive Barker',
+  year: 1972,
+  isAvailable: true,
+  getSummary: function () {
+    return "The book is about the adventures of a carpet and Cal it's protector";
+  },
+  toggleAvailability: function () {
+    this.isAvailable = !this.isAvailable;
+  },
+};
 
 console.log(book.getSummary());
 book.toggleAvailability();
-console.log(book.isAvailable)
+console.log(book.isAvailable);
 book.toggleAvailability();
-console.log(book.isAvailable)
+console.log(book.isAvailable);
 book.toggleAvailability();
-console.log(book.isAvailable)
+console.log(book.isAvailable);

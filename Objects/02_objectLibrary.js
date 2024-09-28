@@ -25,18 +25,18 @@ let library = {
   */
 
 let library = {
-  name: "StaubRacing",
-  location: "Rosemount",
+  name: 'StaubRacing',
+  location: 'Rosemount',
   books: [
     {
-      title: "Dune",
-      author: "Frank Herbert",
+      title: 'Dune',
+      author: 'Frank Herbert',
       year: 1965,
       isAvailable: false,
     },
     {
-      title: "WeaveWorld",
-      author: "Clive Barker",
+      title: 'WeaveWorld',
+      author: 'Clive Barker',
       year: 1987,
       isAvailable: true,
     },
@@ -97,7 +97,7 @@ let library = {
     if (book) {
       book.year = updateYear;
     } else {
-      console.log("Book not found");
+      console.log('Book not found');
     }
   },
 
@@ -113,53 +113,52 @@ let library = {
 
   // Challenge: Find books published before a certain year
   findBooksBeforeYear: function (yearOfBooks) {
-    return this.books.filter(book => {
+    return this.books.filter((book) => {
       return book.year <= yearOfBooks;
     });
   },
 };
 
 // Function call to find books by author
-let booksByCliveBarker = library.findBooksByAuthor("Clive Barker");
-console.log("This is the find book by Author", booksByCliveBarker);
+let booksByCliveBarker = library.findBooksByAuthor('Clive Barker');
+console.log('This is the find book by Author', booksByCliveBarker);
 
 // Function call to add a book
 library.addBook({
-  title: "The Dark Tower",
-  author: "Stephen King",
+  title: 'The Dark Tower',
+  author: 'Stephen King',
   year: 1985,
   isAvailable: true,
 });
 library.addBook({
-  title: "Jurassic Park",
-  author: "Michael Crichton",
+  title: 'Jurassic Park',
+  author: 'Michael Crichton',
   year: 1984,
   isAvailable: true,
 });
 
 // Function call to list available books
-console.log("This is the library books", library.books);
+console.log('This is the library books', library.books);
 console.log(
-  "This is the list of available books",
+  'This is the list of available books',
   library.listAvailableBooks()
 );
 
-
 // Function call to toggle book availability
-library.toggleBookAvailability("Dune");
-console.log("Toggle the Availability", library.findBook("Dune"));
+library.toggleBookAvailability('Dune');
+console.log('Toggle the Availability', library.findBook('Dune'));
 
 // Function call to toggle count of books
 let totalBooks = library.countAllBooks();
-console.log("Here is the toal books in the libary:", totalBooks);
+console.log('Here is the toal books in the libary:', totalBooks);
 
 // Function call to get library summaries
 let summaries = library.getLibrarySummary();
-console.log("Here is the library summaries", summaries);
+console.log('Here is the library summaries', summaries);
 
 // Function call to update book year
-library.updateBookYear("Dune", 1968);
-console.log("Here is the updated book year", library.findBook("Dune"));
+library.updateBookYear('Dune', 1968);
+console.log('Here is the updated book year', library.findBook('Dune'));
 
 // // Function to call to remove book
 // library.removeBook("Dune");
@@ -167,9 +166,9 @@ console.log("Here is the updated book year", library.findBook("Dune"));
 // // "Dune" should no longer be in the `books` array.
 
 // Function call to find book by title
-let FindBookByTitle = library.findBook("Dune");
-console.log("This is the find book by title", FindBookByTitle);
+let FindBookByTitle = library.findBook('Dune');
+console.log('This is the find book by title', FindBookByTitle);
 
 let oldBooks = library.findBooksBeforeYear(1985);
-console.log("Here is the books before this year", oldBooks);
+console.log('Here is the books before this year', oldBooks);
 // Outputs an array of books published before 1980.

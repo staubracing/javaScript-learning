@@ -11,6 +11,6 @@ for (let i = 0; i <= 10; i++) {
 // While Loop
 let count = 10;
 while (count >= 1) {
-  console.log("The count is ", count);
+  console.log('The count is ', count);
   count--;
 }
