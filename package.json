@@ -5,6 +5,9 @@
   "repository": "git@github.com:staubracing/JavaScript-Challenges.git",
   "author": "staubracing <staubracing@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "prettier": "prettier --write ."
+  },
   "devDependencies": {
     "prettier": "^3.3.3"
   }
