@@ -49,6 +49,12 @@ const resultDiv = document.getElementById('result');
 
 searchInput.addEventListener('input', () => {
   const searchTerm = searchInput.value.toLowerCase();
+
+  if (searchTerm === '') {
+    resultDiv.innerHTML = '';
+    return;
+  }
+
   const matchingEmployees = employees.filter((employee) => {
     return (
       employee.name.toLowerCase().includes(searchTerm) ||
