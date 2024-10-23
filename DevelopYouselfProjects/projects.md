@@ -42,7 +42,7 @@
 - The filter should be case insensitive
 - is there a wild card search in javascript?
 
-Project 4 API to get users from jsonplaceholder
+### Project 4 API to get users from jsonplaceholder
 
 - get users from jsonplaceholder `https://jsonplaceholder.typicode.com/users`
 - display the users in the page
