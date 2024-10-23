@@ -41,26 +41,20 @@ if (employeeList) {
   console.error("Element with id 'employeeList' not found.");
 }
 
-// Add a search input to the HTML:
-console.log('searchInput');
 const searchInput = document.getElementById('searchInput');
-console.log('searchInput', searchInput);
 const resultDiv = document.getElementById('result');
 
 searchInput.addEventListener('input', () => {
-  const searchTerm = searchInput.value.toLowerCase();
+  const searchInputLower = searchInput.value.toLowerCase().trim();
 
-  if (searchTerm === '') {
+  if (searchInputLower === '') {
     resultDiv.innerHTML = '';
     return;
   }
 
   const matchingEmployees = employees.filter((employee) => {
-    return (
-      employee.name.toLowerCase().includes(searchTerm) ||
-      employee.occupation.toLowerCase().includes(searchTerm) ||
-      employee.age.toString().includes(searchTerm) ||
-      employee.sex.toLowerCase().includes(searchTerm)
+    return Object.values(employee).some((value) =>
+      value.toString().toLowerCase().includes(searchInputLower)
     );
   });
 
@@ -68,7 +62,7 @@ searchInput.addEventListener('input', () => {
 
   if (matchingEmployees.length > 0) {
     matchingEmployees.forEach((employee) => {
-      resultDiv.innerHTML += `<p>Name: ${employee.name}, Occupation: ${employee.occupation}, Age: ${employee.age}, Sex: ${employee.sex}</p>`;
+      resultDiv.innerHTML += `<p>${employee.name}: ${employee.occupation}</p>`;
     });
   } else {
     resultDiv.innerHTML = '<p>No results found.</p>';

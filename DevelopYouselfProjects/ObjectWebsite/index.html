@@ -1,6 +1,7 @@
 <!doctype html>
 <html>
   <head> </head>
+
   <body>
     <input type="text" id="searchInput" placeholder="Search..." />
     <div id="result"></div>
@@ -17,8 +18,7 @@
 
       searchInput.addEventListener('input', () => {
         const searchTerm = searchInput.value.toLowerCase();
-        
-        // Clear results if the input is empty
+
         if (searchTerm === '') {
           resultDiv.innerHTML = '';
           return;
