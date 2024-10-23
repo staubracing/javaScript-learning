@@ -62,7 +62,7 @@ searchInput.addEventListener('input', () => {
 
   if (matchingEmployees.length > 0) {
     matchingEmployees.forEach((employee) => {
-      resultDiv.innerHTML += `<p>${employee.name}: ${employee.occupation}</p>`;
+      resultDiv.innerHTML += `<li>Name: ${employee.name} Occupation: ${employee.occupation} Age: ${employee.age}</li>`;
     });
   } else {
     resultDiv.innerHTML = '<p>No results found.</p>';
