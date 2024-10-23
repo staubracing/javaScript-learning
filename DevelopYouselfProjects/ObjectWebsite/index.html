@@ -17,6 +17,13 @@
 
       searchInput.addEventListener('input', () => {
         const searchTerm = searchInput.value.toLowerCase();
+        
+        // Clear results if the input is empty
+        if (searchTerm === '') {
+          resultDiv.innerHTML = '';
+          return;
+        }
+
         const matchingKeys = Object.keys(myObject).filter((key) => {
           return (
             key.toLowerCase().includes(searchTerm) ||
@@ -24,7 +31,7 @@
           );
         });
 
-        resultDiv.innerHTML = ''; // Clear previous results
+        resultDiv.innerHTML = '';
 
         if (matchingKeys.length > 0) {
           matchingKeys.forEach((key) => {
