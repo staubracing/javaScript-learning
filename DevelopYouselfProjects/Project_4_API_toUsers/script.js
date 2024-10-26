@@ -2,7 +2,7 @@
 const apiUrl = `https://jsonplaceholder.typicode.com/users`;
 
 fetch(apiUrl)
-  .then((Response) => Response.json())
+  .then((response) => response.json())
   .then((users) => {
     renderUsers(users);
 
