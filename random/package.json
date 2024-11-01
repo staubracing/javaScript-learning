@@ -1,0 +1,20 @@
+{
+  "name": "random",
+  "version": "1.0.0",
+  "description": "",
+  "main": "random.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "chai": "^4.3.10",
+    "jest": "^29.7.0",
+    "mocha": "^10.2.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "uuid": "^9.0.1"
+  }
+}
