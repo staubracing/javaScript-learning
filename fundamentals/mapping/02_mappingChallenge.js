@@ -21,4 +21,4 @@ let people = [
 
 let names = people.map((nameOfPeople) => nameOfPeople.name);
 
-console.log(names);
+console.log(names); // Console.log Names of peopel
